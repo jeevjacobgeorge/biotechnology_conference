@@ -334,7 +334,9 @@ th {
 .site-branding .logo:focus, .site-branding .logo:hover {
   text-decoration: none;
 }
+.brochure {
 
+}
 .btn-download{
   color: #fff;
   padding: 10px 20px;
@@ -639,8 +641,4 @@ th {
 }
 .site-footer .social-block li a:hover, .site-footer .social-block li a:focus {
   opacity: 0.8;
-}
-.social-block img{
-  margin:0;
-  padding:0;
 }
