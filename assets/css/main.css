@@ -26,7 +26,9 @@ a {
 a:focus {
   outline: none;
 }
-
+.link{
+  color:blue;
+}
 h1,
 h2,
 h3,
@@ -88,11 +90,19 @@ ul li {
 .btn:focus {
   outline: none;
 }
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin:0 auto;
+  /* background-color: pink; */
+  padding:12px;
+  gap:30px;
+}
 
 .btn {
   border: 0;
-  border-radius: 0;
-  padding: 6px 28px;
+  border-radius: 6px;
   text-transform: uppercase;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -104,6 +114,7 @@ ul li {
   -webkit-transition-property: -webkit-transform;
           transition-property: transform;
 }
+
 .btn:hover {
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
@@ -224,19 +235,30 @@ ul li {
 }
 
 .bg-image-1 {
-  background: url(../images/backgrounds/bg-1.jpg) no-repeat center center/cover;
+  background: url(../images/backgrounds/header.jpg) no-repeat center center/cover;
 }
 .bg-image-1::before {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
 .bg-image-2 {
-  background: url(../images/backgrounds/bg-2.jpg) no-repeat center bottom/cover;
+  background: url(../images/backgrounds/bg-1.jpg) no-repeat center bottom/cover;
 }
 .bg-image-2::before {
   background-color: rgba(0, 0, 0, 0.7);
 }
-
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
 @media (min-width: 768px) {
   .section {
     padding: 90px 0;
@@ -313,6 +335,14 @@ ul li {
   text-decoration: none;
 }
 
+.btn-download{
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #444040;
+  border-radius: 6px;
+  margin:0 auto;
+  align-items: center;
+}
 /* 
  * 5.0 Site Header
  */
@@ -322,7 +352,7 @@ ul li {
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background: url(../images/backgrounds/header.jpg) no-repeat center center/cover;
+  background: url(../images/backgrounds/1.jpg) no-repeat center center/cover;
   display: table;
 }
 .site-header::before {
@@ -358,7 +388,8 @@ ul li {
 .site-header .intro p {
   font-size: 20px;
   margin-bottom: 10px;
-  font-weight: 300;
+  font-weight: 400;
+  margin:0;
 }
 
 @media (min-width: 768px) {
@@ -414,10 +445,15 @@ ul li {
 .speaker p {
   margin-bottom: 5px;
 }
+.speaker img{
+  padding:92px;
+}
 .speaker img:hover {
   opacity: .7;
 }
+.fees{
 
+}
 /* 
  * 6.4 Section: Registration & Pricing
  */
@@ -603,4 +639,8 @@ ul li {
 }
 .site-footer .social-block li a:hover, .site-footer .social-block li a:focus {
   opacity: 0.8;
+}
+.social-block img{
+  margin:0;
+  padding:0;
 }
