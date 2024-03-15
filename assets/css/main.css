@@ -2,6 +2,8 @@
  * 1. Google Font
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 /* 
  * 2.0 Global Style
  */
@@ -98,6 +100,7 @@ ul li {
   /* background-color: pink; */
   padding:12px;
   gap:30px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .btn {
@@ -147,7 +150,7 @@ ul li {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-title {
@@ -155,7 +158,7 @@ ul li {
   letter-spacing: 1px;
   margin: 0 0 20px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
 
 /* 
@@ -250,18 +253,55 @@ ul li {
 table {
   width: 100%;
   border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #000000;
 }
+
 th {
-  background-color: #f2f2f2;
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: #011B38;
+    color:white;
+
+  }
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  }
+  td {
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+      }
+    }
+  }
 }
 @media (min-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .section-title {
@@ -384,14 +424,20 @@ th {
   font-weight: 300;
 }
 .site-header .intro h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
   margin-top: 0px;
   font-size: 30px;
+  letter-spacing: 0.32rem;
 }
 .site-header .intro p {
   font-size: 20px;
   margin-bottom: 10px;
-  font-weight: 400;
+  font-weight: 500;
   margin:0;
+  letter-spacing: .2rem;
 }
 
 @media (min-width: 768px) {
@@ -448,14 +494,12 @@ th {
   margin-bottom: 5px;
 }
 .speaker img{
-  padding:92px;
+  padding:132px;
 }
 .speaker img:hover {
   opacity: .7;
 }
-.fees{
 
-}
 /* 
  * 6.4 Section: Registration & Pricing
  */
@@ -589,8 +633,25 @@ th {
   margin: 0;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .site-header .intro h1 {
+    letter-spacing: 0.12rem;
+    
+  }
+  .site-header .intro p {
+    letter-spacing: .1rem;
+    font-size: small;
+  }
+  .site-header .intro h2{
+    font-size: medium;
+  }
 
+}
 @media (min-width: 768px) {
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
   .grid-item-sm-6 {
     width: 50%;
   }
