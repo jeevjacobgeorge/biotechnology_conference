@@ -724,3 +724,42 @@ tbody {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+
+
+
+.container1 {
+  color: #fffcfc;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container1 ul{
+  padding-left: 0;
+  margin-top:1.6rem;
+}
+
+
+.container1  li {
+  display: inline-block;
+  font-size: 1.0em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.container1  li span {
+  display: block;
+  font-size: 2.5rem;
+}
+
+@media all and (max-width: 768px) {
+  
+  .container1 li {
+    padding: .5em;
+    font-size: calc(1.0rem * var(--smaller));
+  }
+  
+  .container1  li span {
+    font-size: calc(1.375rem * var(--smaller));
+  }
+}
